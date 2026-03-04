@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum Bridge Group</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="img/PBG_logo.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container nav-container">
+    <div class="logo">
+        <img src="img/PBG_logo.jpg" alt="Platinum Bridge Group Logo">
+        <span>Platinum Bridge Group</span>
+    </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#tienda">Tienda</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <canvas id="particles"></canvas>
+
+    <div class="hero-content">
+        <h2>Conectamos tu mundo digital hacia el mañana</h2>
+        <p>Tecnología avanzada, soluciones personalizadas y alto rendimiento.</p>
+        <a href="#servicios" class="btn-primary">Descubrir más</a>
+    </div>
+</section>
+<!-- SERVICIOS -->
+<section id="servicios" class="section">
+    <h2 class="section-title">Servicios</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Optimización</h3>
+            <p>Mejoramos el rendimiento de tu equipo con configuraciones personalizadas.</p>
+        </div>
+
+        <div class="card">
+            <h3>PCs a Medida</h3>
+            <p>Ensamblamos computadoras personalizadas según tus necesidades.</p>
+        </div>
+
+        <div class="card">
+            <h3>Soporte Técnico</h3>
+            <p>Soluciones rápidas y eficientes para empresas y usuarios.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SOLUCIONES -->
+<section id="soluciones" class="section dark">
+    <h2 class="section-title">Soluciones Implementadas</h2>
+    <p class="center-text">Proyectos tecnológicos que conectan innovación y resultados.</p>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda" class="section">
+    <h2 class="section-title">Tienda</h2>
+    <p class="center-text">Componentes de alto rendimiento y accesorios especializados.</p>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section dark">
+    <h2 class="section-title">Preguntas Frecuentes</h2>
+    <p class="center-text">Resuelve tus dudas sobre nuestros servicios y productos.</p>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section">
+    <h2 class="section-title">Contacto</h2>
+
+    <div class="contact-info">
+        <p><strong>Dirección:</strong> Unión Mz 1 Lt 15, Estado de México</p>
+        <p><strong>Tel:</strong> 55 6975-6323</p>
+        <p><strong>WhatsApp:</strong> 55 2058-0263</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Platinum Bridge Group - Todos los derechos reservados</p>
+</footer>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray = [];
+
+class Particle {
+    constructor(){
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = 2;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+    }
+
+    update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if(this.x < 0 || this.x > canvas.width){
+            this.speedX *= -1;
+        }
+        if(this.y < 0 || this.y > canvas.height){
+            this.speedY *= -1;
+        }
+    }
+
+    draw(){
+        ctx.fillStyle = "#00FF41";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+function init(){
+    particlesArray = [];
+    for(let i = 0; i < 80; i++){
+        particlesArray.push(new Particle());
+    }
+}
+
+function connect(){
+    for(let a = 0; a < particlesArray.length; a++){
+        for(let b = a; b < particlesArray.length; b++){
+            let dx = particlesArray[a].x - particlesArray[b].x;
+            let dy = particlesArray[a].y - particlesArray[b].y;
+            let distance = dx * dx + dy * dy;
+
+            if(distance < 10000){
+                ctx.strokeStyle = "rgba(131, 56, 236, 0.2)";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+    });
+    connect();
+    requestAnimationFrame(animate);
+}
+
+window.addEventListener("resize", function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+});
+
+init();
+animate();
+</script>
+
+</body>
+</html>

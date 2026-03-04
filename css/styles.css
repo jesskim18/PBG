@@ -1,0 +1,218 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1A0006;
+    color: white;
+
+    background-image: 
+    url("data:image/svg+xml,%3Csvg width='60' height='52' viewBox='0 0 60 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 15 V37 L30 52 L0 37 V15 Z' fill='none' stroke='%237B2FFF' stroke-width='1' opacity='0.15'/%3E%3C/svg%3E");
+
+    background-size: 60px 52px;
+}
+
+/* CONTENEDOR */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(90deg, #0B0B0F, #000000);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(114, 17, 17, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-weight: 700;
+    font-size: 20px;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff1e1e;
+}
+
+/* BOTÓN CONTACTO */
+.btn-nav {
+    background: linear-gradient(45deg, #be0d0d, #3c1580);
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: white !important;
+    font-weight: 600;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    padding-top: 80px; /* espacio para header fijo */
+    background: radial-gradient(circle at center, #9e080879 0%, #000000 60%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+/* Elimina cualquier cuadrícula previa */
+.hero::before {
+    display: none !important;
+}
+
+/* Canvas fondo */
+#particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Contenido centrado PERFECTO */
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+/* Título */
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fffefe, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+/* Texto */
+.hero-content p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* Botón */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #be0d0d, #3c1580);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #8338ec;
+}
+
+/* SECCIONES */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #FF1E3C;
+}
+
+.dark {
+    background: #0B0B0F;
+}
+
+.center-text {
+    max-width: 600px;
+    margin: auto;
+    color: #aaa;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(145deg, #3A0CA3, #1A0006);
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(123, 47, 255, 0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 30, 60, 0.7);
+}
+
+/* CONTACTO */
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: #0B0B0F;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
