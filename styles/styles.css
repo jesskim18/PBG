@@ -1,0 +1,646 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ================= HEADER ================= */
+/* ================= HEADER ================= */
+
+.header {
+    background: #1f1f1f;
+    padding: 8px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 15px rgba(63, 11, 11, 0.6);
+}
+
+/* Contenedor personalizado sin romper Bootstrap */
+.custom-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* ================= LOGO ================= */
+
+.logo img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= NAV PERSONALIZADO ================= */
+
+.nav-custom {
+    gap: 35px;
+}
+
+.nav-custom .nav-link {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-custom .nav-link:hover {
+    color: #e10600 !important;
+}
+
+/* Línea animada inferior */
+.nav-custom .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #e10600;
+    transition: 0.3s;
+}
+
+.nav-custom .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Ajuste para que no se encime el contenido */
+body {
+    padding-top: 90px;
+}
+/* ================= SECCIÓN INICIO imagen (HERO PREMIUM) ================= */
+
+
+.inicio {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(120deg, rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+        url("../img/inicio.jpg") center/cover no-repeat;
+}
+
+/* Contenedor elegante */
+.inicio-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 8%;
+}
+
+/* Texto alineado correctamente */
+.inicio-texto {
+    max-width: 600px;
+    text-align: left;
+    animation: fadeSlide 1.2s ease forwards;
+    opacity: 0;
+}
+
+/* Animación de entrada */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtítulo elegante */
+.titulo-principal {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #d1d1d1;
+    margin-bottom: 15px;
+}
+
+/* Nombre principal */
+.titulo-secundario {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 500;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* GC con color elegante */
+.GC {
+    color: #c40000;
+    font-weight: 600;
+}
+
+/* Kabul en blanco puro */
+.kabul {
+    color: #ffffff;
+}
+
+/* Línea premium */
+.linea-separadora {
+    width: 90px;
+    height: 3px;
+    background: linear-gradient(90deg, #c40000, transparent);
+    margin: 25px 0 35px 0;
+}
+
+/* Descripción */
+.descripcion {
+    color: #e0e0e0;
+    line-height: 1.8;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* Botón premium */
+.btn-premium {
+    display: inline-block;
+    padding: 16px 45px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #c40000, #8b0000);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 15px 35px rgba(196,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-whatsapp-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-whatsapp-hero svg {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+}
+
+.btn-whatsapp-hero:hover svg {
+    transform: scale(1.15);
+}
+
+/* Animación elegante */
+.btn-whatsapp-hero:hover svg {
+    transform: scale(1.15);
+}
+
+/* Hover elegante */
+.btn-premium:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(196,0,0,0.6);
+}
+
+/* Efecto shimmer suave */
+.btn-premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    transition: 0.6s;
+}
+
+.btn-premium:hover::before {
+    left: 100%;
+}
+/* ================= IDENTIDAD GC KABUL ================= */
+
+.GC {
+    color: #c40000;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.gc {
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.kabul {
+    color: #ddddddc2;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.kabul3 {
+    color: #4e4e4e; /* blanco o el color que quieras */
+    font-weight: 600;
+}
+/* ================= EFECTO BRILLO ================= */
+
+.brillo {
+    color: #c40000;
+    position: relative;
+}
+
+.brillo::after {
+    content: "";
+    position: absolute;
+    left: -40%;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.8),
+        transparent
+    );
+    transform: skewX(-20deg);
+    animation: brilloMove 3s infinite;
+}
+
+@keyframes brilloMove {
+    0% { left: -40%; }
+    100% { left: 140%; }
+}
+
+/* ================= SECCIONES GENERALES ================= */
+
+.section {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 50px;
+    font-family: 'Playfair Display', serif;
+    color: #2b2b2b;
+}
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-top: 4px solid #e10600;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ================= GALERÍA ================= */
+
+.dark {
+    background: #3a3a3a;
+    color: white;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= FORMULARIO ================= */
+
+.form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form input,
+.form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    border: 1px solid #e10600;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= REVEAL ANIMATION ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .nav {
+        display: none;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .inicio-container {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .titulo-secundario {
+        font-size: 36px;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+}
+
+
+/* ================= SERVICIOS PREMIUM ================= */
+
+.servicios-premium {
+    position: relative;
+    padding: 140px 0;
+    color: white;
+    overflow: hidden;
+
+    background: linear-gradient(
+        -45deg,
+        #000000,
+        #473214,
+        #473214,
+        #000000
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 9s ease infinite;
+}
+
+.servicios-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.servicios-left,
+.servicios-right {
+    flex: 1;
+}
+
+.servicios-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+/* Línea elegante */
+.linea-seccion {
+    width: 580px;
+    height: 3px;
+    background: #c40000;
+    margin: 20px 0 30px 0;
+}
+
+.servicios-left p,
+.servicios-right p {
+    line-height: 1.8;
+    color: #eaeaea;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+/* Botón alineado */
+.servicios-right .btn-premium {
+    margin-top: 10px;
+}
+
+
+.btn-premium {
+    position: relative;
+    padding: 18px 50px;
+    background: linear-gradient(135deg, #c40000, #ff1a1a);
+    color: white;
+    text-decoration: none;
+    border-radius: 80px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 19px;
+    box-shadow: 0 5px 25px rgba(196, 0, 0, 0.4);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Efecto brillo dinámico */
+.btn-premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.5),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.7s;
+}
+
+.btn-premium:hover::before {
+    left: 130%;
+}
+
+.btn-premium:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 2px 70px rgba(196, 0, 0, 0.39);
+}
+
+@media (max-width: 900px) {
+
+    .servicios-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .servicios-left h2 {
+        font-size: 30px;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.motivos-slider-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f1423, #121826);
+    color: white;
+    overflow: hidden;
+}
+
+.motivos-titulo {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 1; /* Quita negrita */
+    margin-bottom: 60px;
+}
+
+.motivos-titulo span {
+    color: #8a0d0db4;
+}
+
+/* WRAPPER */
+.slider-wrapper {
+    overflow: hidden;
+    cursor: grab;
+}
+
+/* TRACK */
+.slider-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: autoScroll 30s linear infinite;
+}
+
+@keyframes autoScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* CARD MÁS CUADRADA */
+.motivo-card {
+    min-width: 230px;
+    height: 230px;
+    background: rgba(255,255,255,0.04);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+
+.motivo-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(196,0,0,0.7);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* ICONO */
+.motivo-icon {
+    margin-bottom: 15px;
+}
+
+.motivo-icon svg {
+    width: 42px;
+    height: 42px;
+    stroke: #c40000;
+    stroke-width: 1.8;
+}
+
+/* TEXTOS */
+.motivo-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.motivo-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #dcdcdc;
+}

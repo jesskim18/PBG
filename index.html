@@ -2,190 +2,613 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>GC|Kabul</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platinum Bridge Group</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="img/PBG_logo.jpg">
-
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles_map.css">
+    <link rel="stylesheet" href="styles/styless_cont.css">
+    <link rel="stylesheet" href="styles/responsiv.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
-    <div class="container nav-container">
-    <div class="logo">
-        <img src="img/PBG_logo.jpg" alt="Platinum Bridge Group Logo">
-        <span>Platinum Bridge Group</span>
-    </div>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid custom-container">
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#soluciones">Soluciones</a></li>
-                <li><a href="#tienda">Tienda</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
-            </ul>
-        </nav>
+      <!-- LOGO -->
+      <a class="navbar-brand logo" href="#inicio">
+        <img src="img/logo.png" alt="Salón GC Kabul">
+      </a>
+
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENÚ -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-custom">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#servicios">Servicios</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#destacados">Destacados</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Galería</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#ubicacion">Ubicación</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+
+        </ul>
+      </div>
+
     </div>
+  </nav>
 </header>
 
-<!-- HERO -->
-<section id="inicio" class="hero">
-    <canvas id="particles"></canvas>
+<script>
+window.addEventListener("scroll", function() {
+    const header = document.querySelector(".header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
-    <div class="hero-content">
-        <h2>Conectamos tu mundo digital hacia el mañana</h2>
-        <p>Tecnología avanzada, soluciones personalizadas y alto rendimiento.</p>
-        <a href="#servicios" class="btn-primary">Descubrir más</a>
+<section id="inicio" class="inicio">
+
+    <div class="inicio-container">
+        <div class="inicio-texto">
+
+            <span class="titulo-principal">
+                Salón de Eventos
+            </span>
+
+            <h1 class="titulo-secundario">
+                <span class="GC">GC</span> 
+                <span class="kabul">Kabul</span>
+            </h1>
+
+            <div class="linea-separadora"></div>
+
+            <p class="descripcion">
+                En <strong>GC Kabul</strong>, creamos experiencias memorables.
+                Un espacio elegante, versátil y exclusivo diseñado para
+                transformar tu evento en algo extraordinario.
+            </p>
+
+            <a href="https://wa.me/5210000000000?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20sus%20eventos." 
+                target="_blank" 
+                class="btn-premium btn-whatsapp-hero">
+
+            <!-- Logo oficial WhatsApp completo -->
+             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white" d="M19.11 17.25c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.55.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.12 2.81.14.18 1.94 2.96 4.71 4.15.66.28 1.18.45 1.58.58.66.21 1.27.18 1.75.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+             <path fill="white" d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2 7.7L.4 31.6l8.1-2.1c2.2 1.2 4.7 1.9 7.5 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.4 0-4.6-.6-6.6-1.7l-.5-.3-4.8 1.3 1.3-4.7-.3-.5c-1.2-2-1.8-4.2-1.8-6.6 0-7 5.7-12.7 12.7-12.7S28.7 9 28.7 16 23 28.9 16 28.9z"/>
+    </svg>
+
+    Solicitar información
+</a>
+
+        </div>
     </div>
-</section>
-<!-- SERVICIOS -->
-<section id="servicios" class="section">
-    <h2 class="section-title">Servicios</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Optimización</h3>
-            <p>Mejoramos el rendimiento de tu equipo con configuraciones personalizadas.</p>
+</section>
+
+<section id="servicios" class="servicios-premium reveal">
+
+    <div class="servicios-container">
+
+        <div class="servicios-left">
+            <h2>Espacios versátiles para celebraciones memorables</h2>
+
+            <div class="linea-seccion"></div>
+
+            <p>
+                Tu evento ideal merece un lugar a la altura. Contamos con instalaciones 
+                totalmente equipadas, iluminación ambiental, sonido de alta fidelidad 
+                y espacios amplios.
+                Creamos entornos funcionales y estéticos que se adaptan a la personalidad 
+                de cada anfitrión. Bodas, XV años, reuniones empresariales o eventos 
+                privados: diseñamos el escenario perfecto para cada ocasión.
+            </p>
         </div>
 
-        <div class="card">
-            <h3>PCs a Medida</h3>
-            <p>Ensamblamos computadoras personalizadas según tus necesidades.</p>
+        <div class="servicios-right">
+            <a href="#contacto" class="btn-premium">Consultar disponibilidad</a>
         </div>
 
-        <div class="card">
-            <h3>Soporte Técnico</h3>
-            <p>Soluciones rápidas y eficientes para empresas y usuarios.</p>
+    </div>
+
+</section>
+
+<section id="destacados" class="motivos-slider-section">
+
+    <h2 class="motivos-titulo">
+        Descubre por qué 
+        <span class="gc">GC</span> 
+        <span class="kabul">Kabul</span> 
+        es diferente a cualquier otro salón.
+    </h2>
+
+    <div class="slider-track" id="sliderTrack">
+
+    <!-- BLOQUE ORIGINAL -->
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="sparkles"></i>
+    </div>
+    <h3>Amplitud y Confort</h3>
+    <p>Instalaciones cómodas para todos.</p>
+    </div>
+
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="smile"></i>
+    </div>
+    <h3>Brincolín Inflable</h3>
+    <p>Diversión garantizada para los más pequeños.</p>
+    </div>
+
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="music"></i>
+    </div>
+    <h3>Audio Profesional + DJ</h3>
+    <p>Sistema de alta fidelidad y ambientación musical incluida.</p>
+    </div>
+
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="badge-dollar-sign"></i>
         </div>
+        <h3>Precios Competitivos</h3>
+        <p>Sin cargos ocultos, pagas solo lo necesario.</p>
+    </div>
+
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="star"></i>
+        </div>
+    <h3>Experiencia Premium</h3>
+    <p>Servicios que nos distinguen de otros salones.</p>
+    </div>
+
+    <!-- DUPLICADO COMPLETO PARA LOOP PERFECTO -->
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="sparkles"></i>
+    </div>
+    <h3>Amplitud y Confort</h3>
+    <p>Instalaciones cómodas para todos.</p>
+    </div>
+
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="smile"></i>
+    </div>
+    <h3>Brincolín Inflable</h3>
+    <p>Diversión garantizada para los más pequeños.</p>
+    </div>
+
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="music"></i>
+    </div>
+    <h3>Audio Profesional + DJ</h3>
+    <p>Sistema de alta fidelidad y ambientación musical incluida.</p>
+    </div>
+
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="badge-dollar-sign"></i>
+        </div>
+        <h3>Precios Competitivos</h3>
+        <p>Sin cargos ocultos, pagas solo lo necesario.</p>
+    </div>
+
+    <div class="motivo-card">
+        <div class="motivo-icon">
+            <i data-lucide="star"></i>
+        </div>
+    <h3>Experiencia Premium</h3>
+    <p>Servicios que nos distinguen de otros salones.</p>
+    </div>
+
+</section>
+
+<section id="galeria" class="hero-slider">
+
+    <div class="slider-bg" id="sliderBg"></div>
+
+    <div class="slider-container">
+
+        <!-- BODAS -->
+        <div class="slide active"
+             data-bg="img/bodas/boda1.jpg"
+             data-link="galeria-bodas.html">
+
+            <img src="img/bodas/boda1.jpg" alt="Bodas en GC Kabul">
+
+            <div class="slide-content">
+                <h2>BODAS</h2>
+                <p>Momentos inolvidables en GC Kabul</p>
+            </div>
+        </div>
+
+        <!-- XV -->
+        <div class="slide"
+             data-bg="img/xv/xv1.jpg.jpeg"
+             data-link="galeria-xv.html">
+
+            <img src="img/xv/xv1.jpg.jpeg" alt="XV años en GC Kabul">
+
+            <div class="slide-content">
+                <h2>XV AÑOS</h2>
+                <p>Celebraciones llenas de magia</p>
+            </div>
+        </div>
+
+        <!-- CORPORATIVO -->
+        <div class="slide"
+             data-bg="img/Coorp/Corp1.jpg.jpeg"
+             data-link="galeria-corporativo.html">
+
+            <img src="img/Coorp/Corp1.jpg.jpeg" alt="Eventos corporativos en GC Kabul">
+
+            <div class="slide-content">
+                <h2>EVENTOS CORPORATIVOS</h2>
+                <p>Espacios profesionales y elegantes</p>
+            </div>
+        </div>
+
+        <button class="slider-nav slider-prev">&#10094;</button>
+        <button class="slider-nav slider-next">&#10095;</button>
+
     </div>
 </section>
-
-<!-- SOLUCIONES -->
-<section id="soluciones" class="section dark">
-    <h2 class="section-title">Soluciones Implementadas</h2>
-    <p class="center-text">Proyectos tecnológicos que conectan innovación y resultados.</p>
-</section>
-
-<!-- TIENDA -->
-<section id="tienda" class="section">
-    <h2 class="section-title">Tienda</h2>
-    <p class="center-text">Componentes de alto rendimiento y accesorios especializados.</p>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section dark">
-    <h2 class="section-title">Preguntas Frecuentes</h2>
-    <p class="center-text">Resuelve tus dudas sobre nuestros servicios y productos.</p>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto" class="section">
-    <h2 class="section-title">Contacto</h2>
-
-    <div class="contact-info">
-        <p><strong>Dirección:</strong> Unión Mz 1 Lt 15, Estado de México</p>
-        <p><strong>Tel:</strong> 55 6975-6323</p>
-        <p><strong>WhatsApp:</strong> 55 2058-0263</p>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <p>© 2026 Platinum Bridge Group - Todos los derechos reservados</p>
-</footer>
 
 <script>
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+    document.addEventListener("DOMContentLoaded", function() {
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+        const slides = document.querySelectorAll(".slide");
+        const nextBtn = document.querySelector(".slider-next");
+        const prevBtn = document.querySelector(".slider-prev");
+        const bg = document.getElementById("sliderBg");
+        const slider = document.querySelector(".hero-slider");
 
-let particlesArray = [];
+        let index = 0;
 
-class Particle {
-    constructor(){
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = 2;
-        this.speedX = (Math.random() - 0.5) * 0.5;
-        this.speedY = (Math.random() - 0.5) * 0.5;
-    }
+        bg.style.backgroundImage = `url(${slides[0].dataset.bg})`;
 
-    update(){
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        if(this.x < 0 || this.x > canvas.width){
-            this.speedX *= -1;
+        function showSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[i].classList.add("active");
+            bg.style.backgroundImage = `url(${slides[i].dataset.bg})`;
         }
-        if(this.y < 0 || this.y > canvas.height){
-            this.speedY *= -1;
+
+        nextBtn.addEventListener("click", () => {
+            index++;
+            if (index >= slides.length) index = 0;
+            showSlide(index);
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index--;
+            if (index < 0) index = slides.length - 1;
+            showSlide(index);
+        });
+
+        let autoSlide = setInterval(nextAutoSlide, 5000);
+
+        function nextAutoSlide() {
+            index++;
+            if (index >= slides.length) index = 0;
+            showSlide(index);
         }
-    }
 
-    draw(){
-        ctx.fillStyle = "#00FF41";
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
+        slider.addEventListener("mouseenter", () => {
+            clearInterval(autoSlide);
+        });
 
-function init(){
-    particlesArray = [];
-    for(let i = 0; i < 80; i++){
-        particlesArray.push(new Particle());
-    }
-}
+        slider.addEventListener("mouseleave", () => {
+            autoSlide = setInterval(nextAutoSlide, 5000);
+        });
 
-function connect(){
-    for(let a = 0; a < particlesArray.length; a++){
-        for(let b = a; b < particlesArray.length; b++){
-            let dx = particlesArray[a].x - particlesArray[b].x;
-            let dy = particlesArray[a].y - particlesArray[b].y;
-            let distance = dx * dx + dy * dy;
+        /* CLICK PARA IR A GALERÍA */
+        slides.forEach(slide => {
+            slide.addEventListener("click", function() {
+                const link = this.dataset.link;
+                if (link) {
+                    window.location.href = link;
+                }
+            });
+        });
 
-            if(distance < 10000){
-                ctx.strokeStyle = "rgba(131, 56, 236, 0.2)";
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                ctx.stroke();
+    });
+    </script>
+
+
+<section id="ubicacion" class="ubicacion-section">
+
+    <div class="ubicacion-container">
+
+        <div class="ubicacion-info">
+            <h2 class="ubicacion-titulo">
+                Nuestra <span>Ubicación</span>
+            </h2>
+
+            <p class="ubicacion-descripcion">
+                Estamos ubicados cerca de la carretera México-Pachuca,
+                ideal para que tus invitados festejen cómodamente y sin complicaciones.
+            </p>
+
+            <div class="ubicacion-datos">
+                <p><strong>Salón de Eventos:</strong> GC Kabul</p>
+                <p><strong>Ciudad:</strong> Av lindero, 1 de Junio esquina, 43840 Matilde, Hgo.</p>
+                <p><strong>Horario:</strong> Lunes a domingo, 10:00 a.m. a 6:00 p.m. o previa cita.</p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/QhVsChsDUgza8kB46" 
+               target="_blank" 
+               class="btn-mapa">
+                Cómo llegar
+            </a>
+        </div>
+
+        <div class="ubicacion-mapa">
+            <iframe 
+                src="https://maps.google.com/maps?q=GC%20Kabul&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contacto" class="contacto-section">
+
+    <div class="contacto-card">
+
+        <div class="contacto-info">
+            <h2>Hablemos de tu evento</h2>
+            <p>En GC Kabul convertimos celebraciones en experiencias inolvidables.
+               Escríbenos o contáctanos directamente por WhatsApp.</p>
+
+            <div class="redes">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="facebook"></i></a>
+                <a href="#"><i data-lucide="phone"></i></a>
+            </div>
+        </div>
+
+        <form id="contactForm" class="form-premium">
+
+            <div class="input-group">
+                <i data-lucide="user"></i>
+                <input type="text" required>
+                <label>Nombre Completo</label>
+            </div>
+
+            <div class="input-group">
+                <i data-lucide="mail"></i>
+                <input type="email" required>
+                <label>Correo Electrónico</label>
+            </div>
+
+            <div class="input-group">
+                <i data-lucide="message-circle"></i>
+                <textarea required></textarea>
+                <label>Cuéntanos sobre tu evento</label>
+            </div>
+
+            <button type="submit" class="btn-shimmer">
+                Enviar Solicitud
+            </button>
+            <a href="https://wa.me/5210000000000" target="_blank" class="btn-whatsapp">
+                
+                <!-- Logo oficial WhatsApp -->
+                <svg viewBox="0 0 32 32" fill="white">
+                    <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2 7.7L.4 31.6l8.1-2.1c2.2 1.2 4.7 1.9 7.5 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.4 0-4.6-.6-6.6-1.7l-.5-.3-4.8 1.3 1.3-4.7-.3-.5c-1.2-2-1.8-4.2-1.8-6.6 0-7 5.7-12.7 12.7-12.7S28.7 9 28.7 16 23 28.9 16 28.9zm6.9-9.6c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.6-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.8-.6-.7-.9-.7h-.8c-.3 0-.7.1-1 .4-.4.4-1.4 1.3-1.4 3.2s1.5 3.8 1.7 4.1c.2.3 2.9 4.4 7 6.2 1 .4 1.8.7 2.4.9 1 .3 1.9.2 2.6.1.8-.1 2.4-1 2.7-2 .3-1 .3-1.9.2-2.1-.1-.2-.3-.3-.7-.5z"/>
+                </svg>
+
+                WhatsApp Directo
+            </a>
+
+            <div class="success-message">
+                ✓ Mensaje enviado correctamente
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+
+<script>
+    function reveal() {
+        let reveals = document.querySelectorAll(".reveal");
+
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+            let elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
             }
         }
     }
-}
 
-function animate(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    particlesArray.forEach(p => {
-        p.update();
-        p.draw();
-    });
-    connect();
-    requestAnimationFrame(animate);
-}
-
-window.addEventListener("resize", function(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
-});
-
-init();
-animate();
+    window.addEventListener("scroll", reveal);
 </script>
 
+
+
+<script>
+const sliderWrapper = document.getElementById('sliderWrapper');
+const sliderTrack = document.getElementById('sliderTrack');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+/* Pausa automática */
+sliderWrapper.addEventListener('mouseenter', () => {
+    sliderTrack.style.animationPlayState = 'paused';
+});
+
+sliderWrapper.addEventListener('mouseleave', () => {
+    sliderTrack.style.animationPlayState = 'running';
+});
+
+/* Drag */
+sliderWrapper.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - sliderWrapper.offsetLeft;
+    scrollLeft = sliderWrapper.scrollLeft;
+});
+
+sliderWrapper.addEventListener('mouseup', () => isDown = false);
+sliderWrapper.addEventListener('mouseleave', () => isDown = false);
+
+sliderWrapper.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - sliderWrapper.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    sliderWrapper.scrollLeft = scrollLeft - walk;
+});
+</script>
+
+
+<script>
+const slides = document.querySelectorAll(".slide");
+const nextBtn = document.querySelector(".slider-next");
+const prevBtn = document.querySelector(".slider-prev");
+const bg = document.getElementById("sliderBg");
+
+let index = 0;
+
+/* Inicializa fondo */
+bg.style.backgroundImage = `url(${slides[0].dataset.bg})`;
+
+function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+    bg.style.backgroundImage = `url(${slides[i].dataset.bg})`;
+}
+
+nextBtn.addEventListener("click", () => {
+    index++;
+    if (index >= slides.length) index = 0;
+    showSlide(index);
+});
+
+prevBtn.addEventListener("click", () => {
+    index--;
+    if (index < 0) index = slides.length - 1;
+    showSlide(index);
+});
+
+/* Auto slide */
+let autoSlide = setInterval(nextAutoSlide, 3000);
+
+function nextAutoSlide() {
+    index++;
+    if (index >= slides.length) index = 0;
+    showSlide(index);
+}
+
+/* Pausar al pasar el mouse */
+const slider = document.querySelector(".hero-slider");
+
+slider.addEventListener("mouseenter", () => {
+    clearInterval(autoSlide);
+});
+
+/* Reanudar cuando el mouse sale */
+slider.addEventListener("mouseleave", () => {
+    autoSlide = setInterval(nextAutoSlide, 3000);
+});
+</script>
+
+<script>
+lucide.createIcons();
+
+const form = document.getElementById("contactForm");
+const successMessage = document.querySelector(".success-message");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    successMessage.classList.add("show");
+
+    setTimeout(() => {
+        successMessage.classList.remove("show");
+        form.reset();
+    }, 4000);
+});
+</script>
+
+
+
+<footer class="footer">
+  <p>© 2026 GC Kabul. Todos los derechos reservados.</p>
+  <p class="creditos">
+     Sitio web diseñado y desarrollado por 
+     <a href="https://platinumbridgegroup.com" target="_blank">
+        Platinum Bridge Group
+     </a>
+  </p>
+</footer>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+lucide.createIcons();
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SCRIPT PARA CERRAR MENÚ EN MÓVIL -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function () {
+
+          if (window.innerWidth < 992) { 
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false
+            });
+            bsCollapse.hide();
+          }
+
+        });
+      });
+
+    });
+  </script>
 </body>
 </html>
